@@ -1,0 +1,38 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'init' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly package data { name: 'md-links',
+4 silly package data   version: '0.1.0',
+4 silly package data   dependencies: { jest: '^24.7.1' },
+4 silly package data   description: '## Preámbulo',
+4 silly package data   main: 'index.js',
+4 silly package data   directories: { test: 'test' },
+4 silly package data   devDependencies: {},
+4 silly package data   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+4 silly package data   repository:
+4 silly package data    { type: 'git',
+4 silly package data      url: 'git+https://github.com/myrna90/GDL002-md-links.git' },
+4 silly package data   author: 'myrna mares',
+4 silly package data   license: 'ISC',
+4 silly package data   bugs: { url: 'https://github.com/myrna90/GDL002-md-links/issues' },
+4 silly package data   homepage: 'https://github.com/myrna90/GDL002-md-links#readme' }
+5 info init written successfully
+6 verbose stack Error: EACCES: permission denied, open '/home/laboratoria-187/GDL002-md-links/package.json'
+7 verbose cwd /home/laboratoria-187/GDL002-md-links
+8 error Linux 4.15.0-47-generic
+9 error argv "/usr/bin/node" "/usr/bin/npm" "init"
+10 error node v8.10.0
+11 error npm  v3.5.2
+12 error path /home/laboratoria-187/GDL002-md-links/package.json
+13 error code EACCES
+14 error errno -13
+15 error syscall open
+16 error Error: EACCES: permission denied, open '/home/laboratoria-187/GDL002-md-links/package.json'
+16 error  { Error: EACCES: permission denied, open '/home/laboratoria-187/GDL002-md-links/package.json'
+16 error   errno: -13,
+16 error   code: 'EACCES',
+16 error   syscall: 'open',
+16 error   path: '/home/laboratoria-187/GDL002-md-links/package.json' }
+17 error Please try running this command again as root/Administrator.
+18 verbose exit [ -13, true ]

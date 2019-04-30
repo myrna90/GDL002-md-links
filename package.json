@@ -1,4 +1,26 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+    "jest": "^24.7.1"
+  },
+  "description": "## Preámbulo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myrna90/GDL002-md-links.git"
+  },
+  "author": "myrna mares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myrna90/GDL002-md-links/issues"
+  },
+  "homepage": "https://github.com/myrna90/GDL002-md-links#readme"
 }
