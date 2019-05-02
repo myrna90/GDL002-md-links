@@ -1,6 +1,6 @@
 {
-  "name": "md-links-labmyr",
-  "version": "0.1.0",
+  "name": "md-links",
+  "version": "0.1.1",
   "dependencies": {
     "jest": "^24.7.1"
   },

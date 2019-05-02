@@ -3,6 +3,7 @@ const path = require("path");
 const pathFile = process.argv[2];
 const links = require("./mdLinks");
 const readFileResult = links(pathFile, null);
+const request = require("request");
 
 
 
@@ -47,17 +48,44 @@ function pathMd(pathFile){
   }
 };
 
-//leer el archivo
-  readFileResult.then(
-    (data)=> { // On Success
-     console.log("Found links:");
-     url(data);
-    },
-    (err)=> { // On Error
-        console.error(err);
-    }
-   );
+//Función para leer archivo
+readFileResult.then(
+  (data) => { // On Success
+    console.log("Links Encontrados:");
+    let htmlLinks = url(data);
 
+// Válidar Links encontrados.
+    for (let i = 0; i < htmlLinks.length; i++) {
+
+      request(htmlLinks[i].href, (error, response, body ) => {
+        if (error){
+          console.log(htmlLinks[i].href + '  No se encontró la página');
+          htmlLinks[i].pathExist=false;
+        }
+        else{
+          
+        const statusCode = response.statusCode;
+        // const contentType = res.headers['content-type'];
+
+        if (statusCode === 200){
+          console.log(htmlLinks[i].href + '  Página válida ');
+          htmlLinks[i].pathExist=true;
+        }
+        else{
+          console.log('página inválida');
+        }
+      }
+        
+      });
+    }
+
+
+
+  },
+  (err) => { // On Error
+    console.error(err);
+  }
+);
 
 function url(data) {
 const mdLinkRgEx = /\[(.+?)\]\((.+?\))/g;
@@ -87,4 +115,5 @@ module.exports = {
 "pathMd": pathMd,
 "url": url,
 "readFileResult": readFileResult,
+"links": links,
 };
