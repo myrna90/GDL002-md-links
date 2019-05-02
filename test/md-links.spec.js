@@ -1,25 +1,25 @@
 const mdLinks = require('../index.js');
 
 
-describe('pathInserted', () => {
+describe('pathInsert', () => {
   it('should be a function', () => {
-    expect(typeof mdLinks.pathInserted).toBe("function");
+    expect(typeof mdLinks.pathInsert).toBe("function");
   });
   it('Should return false', () => {
-    expect(mdLinks.pathInserted()).toBe(false);
+    expect(mdLinks.pathInsert()).toBe(false);
   });
   it('should return true', () => {
-    expect(mdLinks.pathInserted('./README.md')).toBe(true);
+    expect(mdLinks.pathInsert('./README.md')).toBe(true);
       });
 
 });
 
-describe("pathWorking", () =>{
+describe("pathExis", () =>{
   it("Should be false", () => {
-       expect(mdLinks.pathWorking("./README.txt")).toBe(false);
+       expect(mdLinks.pathExis("./README.txt")).toBe(false);
    });
    it("Should be true", () => {
-     expect(mdLinks.pathWorking("./README.md")).toBe(true);
+     expect(mdLinks.pathExis("./README.md")).toBe(true);
    });
     });
   
@@ -47,8 +47,9 @@ describe("readFileResult", () => {
   });
 });
 
-describe("urlify", () =>{
+describe("url", () =>{
   it("Should be true", ()=> {
-    expect(mdLinks.urlify("./README.md")).toBe(links);
+    expect(mdLinks.url("./README.md")).toBe(links);
   });
 });
+

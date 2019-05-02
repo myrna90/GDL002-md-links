@@ -1,5 +1,11 @@
 # Markdown Links
 
+## Control de flujo
+
+Diagrama de contrlo de flujo aqui:
+
+[Control-de-flujo](https://www.lucidchart.com/documents/edit/eacd6c92-f12c-4dbc-b400-9a2e408e0216/0). 
+
 ## Preámbulo
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado

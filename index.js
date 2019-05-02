@@ -7,7 +7,7 @@ const readFileResult = links(pathFile, null);
 
 
 //funcion que verifica si el campo esta vacio ó lleno
-function pathInserted(pathFile){
+function pathInsert(pathFile){
   if(pathFile == undefined){
     console.log("false");
     return false
@@ -18,7 +18,7 @@ function pathInserted(pathFile){
 };
 
 //función para saber si la ruta existe
-function pathWorking(pathFile){
+function pathExis(pathFile){
   if(fs.existsSync(pathFile)){
     console.log("true");
     return true
@@ -51,7 +51,7 @@ function pathMd(pathFile){
   readFileResult.then(
     (data)=> { // On Success
      console.log("Found links:");
-     urlify(data);
+     url(data);
     },
     (err)=> { // On Error
         console.error(err);
@@ -59,7 +59,7 @@ function pathMd(pathFile){
    );
 
 
-function urlify(data) {
+function url(data) {
 const mdLinkRgEx = /\[(.+?)\]\((.+?\))/g;
 const mdLinkRgEx2 = /\[(.+?)\]\((.+?)\)/;
 let allLinks = data.match(mdLinkRgEx);
@@ -81,10 +81,10 @@ return (htmlLinks);
 
 
 module.exports = {
-"pathInserted": pathInserted,
-"pathWorking": pathWorking,
+"pathInsert": pathInsert,
+"pathExis": pathExis,
 "pathDirectory": pathDirectory,
 "pathMd": pathMd,
-"urlify": urlify,
+"url": url,
 "readFileResult": readFileResult,
 };
