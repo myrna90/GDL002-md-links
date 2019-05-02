@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const pathFile = process.argv[2];
-const links = require("./links");
+const links = require("./mdLinks");
 const readFileResult = links(pathFile, null);
 
 
